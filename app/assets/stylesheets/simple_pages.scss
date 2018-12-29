@@ -16,16 +16,6 @@ html, body {
   content: "";
   display: block;
 }
-.site-footer, .page-wrap:after {
-  height: 150px;
-}
-.site-footer {
-  background: black;
-  color: white;
-}
-li {
-  display: inline;
-}
 
 h1, h2 {
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
@@ -37,4 +27,14 @@ footer {
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
   color: black;
   text-align: center;
+}
+.site-footer, .page-wrap:after {
+  height: 150px;
+}
+.site-footer {
+  background: black;
+  color: white;
+}
+li {
+  display: inline;
 }
