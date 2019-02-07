@@ -32,13 +32,15 @@
             <%= link_to "Products", products_path, class: 'nav-link' %>
           </li>
         </ul>
-        <div>
-          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-            <%= form.label :q, 'Search for:' %>
-            <%= form.text_field :q, id: 'q', value: params[:q] %>
-            <%= form.submit 'Search' %>
-          <% end %>
-        </div><!-- end search form -->
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%= form.label :q, 'Search for:' %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+              <%= form.submit 'Search' %>
+            <% end %>
+          </div><!-- end search form -->
+        </form>
       </div><!-- end of navbar-collapse -->
     </nav>
 
