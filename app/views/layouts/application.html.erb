@@ -55,13 +55,14 @@
         </div><!-- end navbar-collapse -->
       </nav><!-- end navbar -->
     </div><!-- end container -->
-    <% if notice %>
-      <p class="notice alert-dark" role="alert"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-dark" role="alert"><%= alert %></p>
-    <% end %>
-
+    <div class="alert">
+      <% if notice %>
+        <p class="alert alert-dark" role="alert"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-dark" role="alert"><%= alert %></p>
+      <% end %>
+    </div>
     <%= yield %>
 
     <footer class="site-footer">
