@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Firstapp</title>
+    <title>BFDW</title>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
   </head>
@@ -63,6 +65,7 @@
         <p class="alert alert-dark" role="alert"><%= alert %></p>
       <% end %>
     </div>
+    
     <%= yield %>
 
     <footer class="site-footer">
