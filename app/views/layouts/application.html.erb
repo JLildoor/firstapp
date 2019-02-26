@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Firstapp</title>
+    <title>BFDW</title>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
   </head>
@@ -55,13 +57,15 @@
         </div><!-- end navbar-collapse -->
       </nav><!-- end navbar -->
     </div><!-- end container -->
-    <% if notice %>
-      <p class="notice alert-dark" role="alert"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-dark" role="alert"><%= alert %></p>
-    <% end %>
-
+    <div class="alert">
+      <% if notice %>
+        <p class="alert alert-dark" role="alert"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-dark" role="alert"><%= alert %></p>
+      <% end %>
+    </div>
+    
     <%= yield %>
 
     <footer class="site-footer">
