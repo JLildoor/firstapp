@@ -9,6 +9,10 @@ class Product < ApplicationRecord
   def lowest_rating_comment
     comments.rating_asc.last
   end
+
+  def average_rating
+    comments.average(:rating).to_f
+  end
 end
 
 def self.search(search_term)
