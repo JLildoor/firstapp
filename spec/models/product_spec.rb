@@ -3,7 +3,6 @@ require 'rails_helper'
 describe Product do
   context "when the product has comments" do
     let(:product) { Product.create!(name: "race bike") }
-
     let(:user) { User.create!(email: "lildoor@me.com", password: "password") }
 
     before do
@@ -16,6 +15,8 @@ describe Product do
       expect(product.average_rating).to eq 3
     end
 
-    
+    it "is not valid without a name" do
+      expect(Product.new(description: "Nice bike")).not_to be_valid
+    end
   end
 end
