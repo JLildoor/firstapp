@@ -60,6 +60,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~>3.8'
+
+  gem 'factory_bot_rails', '~>4.0'
 end
 
 group :production do
@@ -70,8 +72,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Devise authentication
 gem 'devise'
 
-# CanCanCan authorization
 gem 'cancancan', '~> 2.0'
