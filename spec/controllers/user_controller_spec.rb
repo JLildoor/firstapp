@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe UsersController do
-  let(:user) { User.create!(email: "lildoor@me.com", password: "password") }
-  let(:user2) { User.create!(email: "jason.laporte@me.com", password: "password") }
+  # let(:user) { User.create!(email: "lildoor@me.com", password: "password") }
+  user = FactoryBot.create(:user)
 
   describe 'GET #show' do
     context 'when a user is logged in' do
@@ -14,10 +14,6 @@ describe UsersController do
         get :show, params: { id: user.id }
         expect(response).to be_ok
         expect(assigns(:user)).to eq user
-      end
-
-      it 'does not allow user to see other users' do
-
       end
     end
 
