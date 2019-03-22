@@ -7,9 +7,6 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
-      if @products.nil?
-        flash[:notice] = "We don't have #{search_term}, check out our other items!"
-        @products = Product.limit(5)
     else
       @products = Product.all
     end
@@ -80,5 +77,4 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :price)
     end
-  end
 end
