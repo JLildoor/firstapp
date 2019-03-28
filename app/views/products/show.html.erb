@@ -9,13 +9,12 @@
   </p>
 
   <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
+    <%= image_tag(@product.image_url, width: "350", class: "img-zoom") %>
   </p>
 
   <p>
-    <strong>Image url:</strong>
-    <%= @product.image_url %>
+    <strong>Description:</strong>
+    <%= @product.description %>
   </p>
 
   <p>
