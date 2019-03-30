@@ -3,18 +3,13 @@
 </div>
 
 <div class="container">
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
+  <% cache @product do %>
+    <h2><%= @product.name %></h2>
+    <p><%= @product.description %></p>
+  <% end %>
 
   <p>
     <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url) %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
   </p>
 
   <p>
