@@ -4,8 +4,8 @@
 
 <div class="container">
   <% cache @product do %>
-    <h2><%= @product.name %></h2>
-    <p><%= @product.description %></p>
+  <h2><%= @product.name %></h2>
+  <p><%= @product.description %></p>
   <% end %>
 
   <p>
@@ -34,17 +34,13 @@
     <%= @product.highest_rating_comment %>
     <%= @product.lowest_rating_comment %>
   </p>
-
-  <div class="container">
-    <p>
-      <%= render 'comments' %>
-    </p>
-  </div>
-
-  <p>
-    <%= render 'new_comment' %>
-  </p>
 </div>
+
+<%= render 'new_comment' %>
+
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
+<%= render 'comments' %>
 
 <div class="container">
   <%= link_to 'Edit', edit_product_path(@product) %> |
