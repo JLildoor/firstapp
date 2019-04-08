@@ -2,7 +2,7 @@
   <p id="notice"><%= notice %></p>
 </div>
 
-<div class="container">
+<div class="container" data-product-id="<%= @product.id %>">
   <% cache @product do %>
   <h2><%= @product.name %></h2>
   <p><%= @product.description %></p>
@@ -29,18 +29,16 @@
     <%= hidden_field_tag(:product_id, @product.id) %>
   <% end %>
 
-  <p>
-    <strong>Customer Reviews:</strong>
-    <%= @product.highest_rating_comment %>
-    <%= @product.lowest_rating_comment %>
-  </p>
+  <strong>What customer's are saying:</strong><br>
+  <%= @product.highest_rating_comment.body %><br>
+  <%= @product.lowest_rating_comment.body %><br>
+
+  <%= render 'new_comment' %>
+
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
+  <%= render 'comments' %>
 </div>
-
-<%= render 'new_comment' %>
-
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-
-<%= render 'comments' %>
 
 <div class="container">
   <%= link_to 'Edit', edit_product_path(@product) %> |
