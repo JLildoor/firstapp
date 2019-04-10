@@ -19,7 +19,7 @@
 
   <p>
     <strong>Price:</strong>
-    <%= @product.price %>
+    <%= number_to_currency(@product.price) %>
   </p>
 
   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>" id="average_rating"></div></p>
