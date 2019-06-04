@@ -17,5 +17,6 @@
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
+//= require font_awesome5
 //= require jquery.raty.js
 //= require_tree .

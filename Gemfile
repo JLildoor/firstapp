@@ -42,6 +42,21 @@ gem 'will_paginate', '~> 3.1.0'
 
 gem 'rails-controller-testing'
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'devise'
+
+gem 'cancancan', '~> 2.0'
+
+gem 'stripe'
+
+gem 'dalli'
+
+gem 'redis-rails'
+
+gem 'font_awesome5_rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -67,17 +82,3 @@ end
 group :production do
   gem 'pg'
 end
-
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'devise'
-
-gem 'cancancan', '~> 2.0'
-
-gem 'stripe'
-
-gem 'dalli'
-
-gem 'redis-rails'

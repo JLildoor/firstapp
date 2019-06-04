@@ -7,21 +7,12 @@
 html, body {
   background-color: #fff;
   color: #333;
-  margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   height: 100%;
 }
-.page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -142px;
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
+
 h1, h2 {
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
   color: black;
@@ -30,4 +21,9 @@ h1, h2 {
 
 li {
   display: inline;
+}
+
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
